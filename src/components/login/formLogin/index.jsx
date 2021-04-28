@@ -13,7 +13,7 @@ export const FormLogin = () => {
       <FormMarvel
         onSubmit={handleSubmit}
       >
-        <h2 style={{ color: colors.red, fontSize: '1.5em' }}>Bem-vindo(a) de volta!</h2>
+        <h2>Bem-vindo(a) de volta!</h2>
         <InputPM
           type='text'
           placeholder='Usuario'
