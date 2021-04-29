@@ -1,20 +1,10 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { colors } from '../../../../colors'
 
-const upToDown = keyframes`
-  from { 
-    top: -100vh; 
-  }
-  to { 
-    top: 10vh; 
-  }
-`
 export const BoxEnterTitle = styled.div`
-  animation: ${upToDown} 1s linear;
   position: absolute;
-  top: 10vh;
-  width: 75%;
-  max-width: 300px;
+  top: -40%;
+  width: 100%;
 `
 
 export const BoxRed = styled.div`

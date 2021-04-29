@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { BoxEnterTitle, BoxRed, BoxTitle } from "./style"
 
-export const LogoEntry = () => {
+export const LogoEntry = ({ height }) => {
   const [title, setTitle] = useState([])
 
   useEffect(() => {
@@ -17,7 +17,9 @@ export const LogoEntry = () => {
   }, [])
 
   return (
-    <BoxEnterTitle>
+    <BoxEnterTitle
+      height={height}
+    >
       <BoxRed/>
       <BoxTitle>
         {title.join('')}

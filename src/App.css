@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'Marvel-Regular';
-  src: url('http://192.168.0.111:3000/fontes/MarvelRegular-Dj83.ttf');
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +7,6 @@
   font-size: 100%;
 }
 
-p, h1, input, label, span, button {
-  font-family: 'Marvel-Regular';
+p, h1, h2, input, label, span, button {
+  font-family: 'Axiform-Regular';
 }

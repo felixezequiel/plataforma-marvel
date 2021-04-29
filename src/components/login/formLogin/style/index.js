@@ -1,11 +1,29 @@
 import styled, { keyframes } from 'styled-components'
+import { colors } from '../../../../colors'
 
 const downToUp = keyframes`
-  from {
-    bottom: -110vh
+  0% {
+    bottom: -110vh;
+    opacity: 0;
   }
-  to {
-    bottom: 30vh
+  25% {
+    bottom: -85vh;
+    opacity: 0;
+  }
+
+  50% {
+    bottom: -55vh;
+    opacity: 0;
+  }
+
+  75% {
+    bottom: -25vh;
+    opacity: .5;
+  }
+
+  100% {
+    bottom: 10vh;
+    opacity: 1;
   }
 `
 
@@ -14,8 +32,9 @@ export const ContainerFormLogin = styled.div`
   max-width: 400px;
   animation-delay: 2s;
   animation: ${downToUp} 1s linear;
+  
   position: absolute;
-  bottom: 30vh;
+  bottom: 10vh;
 `
 
 export const FormMarvel = styled.form`
@@ -24,6 +43,7 @@ export const FormMarvel = styled.form`
   align-items: center;
 
   width: 100%;
+  overflow-y: auto;
 `
 
 export const FooterForm = styled.div`
@@ -35,4 +55,19 @@ export const FooterForm = styled.div`
 
   font-size: 100%;
   color: white;
+`
+
+export const Wellcome = styled.h2`
+  font-family: 'Axiform-Regular';
+  color: ${colors.red};
+`
+
+export const BoxSubtitle = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  color: ${colors.gray};
+
+  margin-top: 20px;
 `

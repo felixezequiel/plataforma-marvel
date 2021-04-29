@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const BackgroundLogin = styled.div`
+export const BackgroundImagePM = styled.div`
   background-image: url('/fundo.svg');
   background-repeat: no-repeat;
   background-position: right -100px top -20px;
@@ -8,7 +8,7 @@ export const BackgroundLogin = styled.div`
   height: 100vh;
 `
 
-export const ContainerLogin = styled.div`
+export const ContainerBackgroundPM = styled.div`
   width: 100%;
   height: 100%;
 
@@ -16,5 +16,5 @@ export const ContainerLogin = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient( to right, black, black, transparent );
+  background-image: linear-gradient( to right, black, black, ${props => props.colored ? 'rgba(255, 0, 0, .3)' : 'transparent'});
 `
