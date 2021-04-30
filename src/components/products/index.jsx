@@ -1,15 +1,21 @@
-import { ContainerProduct } from "./style"
+import { ContainerDescribe, ContainerProduct } from "./style"
+import React from 'react'
 
-export const Product = ({ data }) => {
+export const Product = React.forwardRef((props, ref) => {
+  const { data } = props
   return (
     <ContainerProduct
       image={data.srcImagem}
+      ref={ref}
     >
       <img 
         src={data.srcImagem}
         alt='imagem'
-        height='400vh'
+        height='100%'
       />
+      <ContainerDescribe>
+
+      </ContainerDescribe>
     </ContainerProduct>
   )
-}
+}) 

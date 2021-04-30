@@ -20,42 +20,46 @@ const Scroll = keyframes`
 
 export const ContainerCarrousel = styled.div`
   width: 90%;
-  height: 100vh;
-
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 `
 
 export const ContentCarrousel = styled.div`
   height: 100%;
+  width: 100%;
+
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  
-  overflow-x: hidden;
+  justify-content: flex-start;
+ 
+  overflow: hidden;
   animation: ${Scroll} 1s linear;
+  scroll-behavior: smooth;
 `
 
-export const ButtonPrev = styled.button`
-  height: 50%;
-  width: 20px;
-
-  background: transparent;
-  outline: none;
+export const ButtonPrev = styled.img.attrs(props => {
+  return {
+    src: props.image
+  }
+})`
+  height:${props => props.lengthButtonPercent + '%'};
+  transform: rotate(180deg);
+  opacity: ${props => props.disabled ? '.5' : '1'};
+  cursor: pointer;
   :hover{
-    box-shadow: 0 0 5px white;
-    outline: none;
+    height:${props => (props.lengthButtonPercent * 1.03) + '%'};
   }
 `
-export const ButtonNext = styled.button`
-  height: 50%;
-  width: 20px;
-
-  background: transparent;
-  outline: none;
+export const ButtonNext = styled.img.attrs(props => {
+  return {
+    src: props.image
+  }
+})`
+  height:${props => props.lengthButtonPercent + '%'};
+  opacity: ${props => props.disabled ? '.5' : '1'};
+  cursor: pointer;
   :hover{
-    box-shadow: 0 0 5px white;
-    outline: none;
+    height:${props => (props.lengthButtonPercent * 1.03) + '%'};
   }
 `

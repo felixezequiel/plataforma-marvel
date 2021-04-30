@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { BackgroundPM } from "../backgroundPM"
 import { Menu } from "../menu"
 import { BodyHome, ContainerHome } from "./style"
@@ -10,7 +10,9 @@ import { Carrousel } from "../Carrousel"
 export const Home = () => {
   const [option, setOption] = useState('character')
   const [state, setState] = useState({ value: data.character })
+  const [lengthScroll, setLengthScroll] = useState(0)
 
+  const reference = useRef(null)
   useEffect(() => {
     switch (option) {
       case 'character':
@@ -26,20 +28,31 @@ export const Home = () => {
         setState({ value: data.character })
     }
   }, [option])
-
+  
+  useEffect(() => {
+    setLengthScroll(reference.current.getBoundingClientRect().width)
+  }, [])
+  
   return (
     <BackgroundPM colored={true}>
       <ContainerHome>
         <Menu
           setOption={setOption}
+          option={option}
         />
         <BodyHome>
           <Carrousel
-            lengthScroll={400}
+            lengthScroll={lengthScroll}
+            imgButton='/imagens/button-seta.svg'
+            lengthButtonPercent={5}
           >
             {
               state.value.map((product, key) => (
-                <Product data={product} key={key} />
+                <Product 
+                  ref={reference}
+                  data={product} 
+                  key={key} 
+                />
               ))
             }
           </Carrousel>

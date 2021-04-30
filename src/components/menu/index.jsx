@@ -4,7 +4,7 @@ import { Logo } from "../logo"
 import { Profile } from "./profile"
 import { BoxLogo, BoxMenu, ContainerMenu } from "./style"
 import { menus } from './config/menus'
-export const Menu = ({ setOption }) => {
+export const Menu = ({ setOption, option }) => {
   return (
     <ContainerMenu>
       <BoxLogo>
@@ -13,13 +13,17 @@ export const Menu = ({ setOption }) => {
       <BoxMenu>
         {
           menus.map((menu, key) => (
-            <p 
+            <span
               key={key}
-              style={{cursor: 'pointer'}}
+              style={{
+                cursor: 'pointer',
+                textDecoration: option === menu.value ? 'underline' : 'none',
+                padding: '10px'
+              }}
               onClick={() => setOption(menu.value)}
             >
               {menu.botao}
-            </p>
+            </span>
           ))
         }
         <Profile />
