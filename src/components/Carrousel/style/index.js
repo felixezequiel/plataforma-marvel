@@ -23,7 +23,8 @@ const Scroll = keyframes`
 `
 
 export const ContainerCarrousel = styled.div`
-  width: 90%;
+  width: 100%;
+  max-width: 1300px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -32,11 +33,8 @@ export const ContainerCarrousel = styled.div`
 export const ContentCarrousel = styled.div`
   height: 100%;
   width: 100%;
-
   display: flex;
   align-items: center;
-  justify-content: flex-start;
- 
   overflow: hidden;
   animation: ${Scroll} 1s linear;
   scroll-behavior: smooth;

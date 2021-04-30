@@ -35,7 +35,7 @@ export const Carrousel = ({ lengthScroll, imgButton, lengthButtonPercent, childr
       <ButtonPrev
         disabled={disablePrev}
         onClick={() => {
-          if (!disablePrev) return setPosition(prevState => prevState - lengthScroll)
+          if (!disablePrev) return setPosition(prevState => prevState - (lengthScroll + 40)) //40 representa a soma dar margins e padding fixas do component
         }}
         image={imgButton} 
         lengthButtonPercent={lengthButtonPercent}
@@ -49,7 +49,7 @@ export const Carrousel = ({ lengthScroll, imgButton, lengthButtonPercent, childr
       <ButtonNext
         disabled={disabledNext}
         onClick={() => {
-          if (!disabledNext) return setPosition(prevState => prevState + lengthScroll)
+          if (!disabledNext) return setPosition(prevState => prevState + (lengthScroll + 40)) //40 representa a soma dar margins e padding fixas do component
         }}
         image={imgButton}
         lengthButtonPercent={lengthButtonPercent}

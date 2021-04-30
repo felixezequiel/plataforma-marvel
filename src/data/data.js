@@ -2,14 +2,14 @@ export const data = {
   
   character: [
     {
-      name: 'Homem-Aranha',
+      title: 'Homem-Aranha',
       describe: 'Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.',
       details: null,
       assessment: null,
       srcImagem: '/imagens/capa-homem-aranha.svg'
     },
     {
-      name: 'Wanda Maximoff',
+      title: 'Wanda Maximoff',
       describe: 'Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha Wundagore, base do Alto Evolucionário. Durante anos, ela e seu irmão gêmeo, Pietro, acreditavam que eram filhos de um casal de ciganos.',
       details: `Aparições: 
       Vingadores - Era de Ultron 
@@ -21,7 +21,7 @@ export const data = {
       srcImagem: '/imagens/capa-wanda-maximoff.svg'
     },
     {
-      name: 'Thanos',
+      title: 'Thanos',
       describe: "A lua Titã era governada por Mentor (A'Lars), quando então reinava paz e tecnologia. Mentor tinha dois filhos: Eros e Thanos.  Ao contrário do irmão, Thanos, era bem mais poderoso e almejava ainda mais.",
       details: `Aparições: 
       Vingadores 
@@ -32,7 +32,7 @@ export const data = {
       srcImagem: '/imagens/capa-thanos.svg'
     },
     {
-      name: 'Hulk',
+      title: 'Hulk',
       describe: 'Na história original dos quadrinhos, o Hulk é um selvagem e poderoso alter ego do Dr. Robert Bruce Banner, um cientista que foi atingido por raios gama enquanto salvava um adolescente durante o teste militar.',
       details: `Aparições: 
       Vingadores 

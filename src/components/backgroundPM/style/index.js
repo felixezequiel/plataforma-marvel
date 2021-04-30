@@ -4,7 +4,7 @@ export const BackgroundImagePM = styled.div`
   background-image: url('/fundo.svg');
   background-repeat: no-repeat;
   background-position: top -30px right -50px;
-  background-size: cover;
+  background-size: 80rem;
   width: 100vw;
   height: 100vh;
 `

@@ -1,21 +1,28 @@
 import { ContainerDescribe, ContainerProduct } from "./style"
 import React from 'react'
+import { Details } from "../details"
 
 export const Product = React.forwardRef((props, ref) => {
-  const { data } = props
+  const { data, setDetails } = props
+  console.log(data)
   return (
     <ContainerProduct
       image={data.srcImagem}
       ref={ref}
     >
-      <img 
-        src={data.srcImagem}
-        alt='imagem'
-        height='100%'
-      />
       <ContainerDescribe>
-
+        <h1>
+          {data.title}
+        </h1>
+        <p>
+          {data.describe}
+        </p>
+        <span
+          onClick={() => setDetails({ jsx: <Details data={data} setDetails={setDetails} /> })}
+        >
+          ver detalhes
+        </span>
       </ContainerDescribe>
     </ContainerProduct>
   )
-}) 
+})

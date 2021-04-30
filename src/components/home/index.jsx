@@ -10,6 +10,7 @@ export const Home = () => {
   const [option, setOption] = useState('character')
   const [state, setState] = useState({ value: data.character })
   const [lengthScroll, setLengthScroll] = useState(0)
+  const [details, setDetails] = useState({ jsx: <></> })
 
   const reference = useRef(null)
   useEffect(() => {
@@ -40,6 +41,7 @@ export const Home = () => {
           option={option}
         />
         <BodyHome>
+          { details.jsx }
           <Carrousel
             lengthScroll={lengthScroll}
             imgButton='/imagens/button-seta.svg'
@@ -49,7 +51,8 @@ export const Home = () => {
               state.value.map((product, key) => (
                 <Product 
                   ref={reference}
-                  data={product} 
+                  data={product}
+                  setDetails={setDetails}
                   key={key} 
                 />
               ))
