@@ -16,28 +16,32 @@ export const ContainerDetails = styled.div`
 `
 
 export const DisplayDetails = styled.div`
-  width: 90%;
+  width: 80%;
   max-width: 900px;
-  height: 80%;
+  height: 70%;
   max-height: 700px;
 
   display: flex;
   flex-wrap: wrap;
+
   align-items: center;
   background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0), black);
 
   border-radius: 4em;
+
+  overflow: auto;
 `
 export const BoxDescribe = styled.div`
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
+
   color: white;
 
   display: flex;
-  justify-content: space-around;
+  align-items: center;
   flex-direction: column;
 
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
   
 `
 
