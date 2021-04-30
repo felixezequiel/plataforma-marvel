@@ -1,14 +1,15 @@
 import { useEffect, useRef, useState } from "react"
 import { ButtonNext, ButtonPrev, ContainerCarrousel, ContentCarrousel } from "./style"
-
 export const Carrousel = ({ lengthScroll, imgButton, lengthButtonPercent, children }) => {
 
   const [position, setPosition] = useState(0)
   const [disabledNext, setDisabledNext] = useState(false)
   const [disablePrev, setDisablePrev] = useState(false)
+  const [classScroll, setClassScroll] = useState('none')
 
   const reference = useRef(null)
   useEffect(() => {
+    
     if (reference.current.offsetWidth + position > reference.current.scrollWidth) setDisabledNext(true)
     else setDisabledNext(false)
     
@@ -16,14 +17,21 @@ export const Carrousel = ({ lengthScroll, imgButton, lengthButtonPercent, childr
     else setDisablePrev(false)
 
     reference.current.scroll(position, 0)
+    
   }, [position, lengthScroll])
 
   useEffect(() => {
+    setClassScroll('scroll')
     setPosition(0)
+    setTimeout(() => {
+      setClassScroll('none')
+    }, 1000)
   }, [children])
 
   return (
-    <ContainerCarrousel>
+    <ContainerCarrousel
+      className={classScroll}
+    >
       <ButtonPrev
         disabled={disablePrev}
         onClick={() => {
@@ -36,7 +44,7 @@ export const Carrousel = ({ lengthScroll, imgButton, lengthButtonPercent, childr
         ref={reference}
         position={reference.current?.offsetWidth + position}
       >
-        { children }
+        { children } 
       </ContentCarrousel>
       <ButtonNext
         disabled={disabledNext}

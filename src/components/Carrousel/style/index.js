@@ -5,17 +5,21 @@ const Scroll = keyframes`
     transform: translate3d(500px, 0, 0); 
   }
   30% {
-    transform: translate3d(0px, 0, 0); 
+    transform: translate3d(2px, 0, 0); 
   }
   50% {
-    transform: translate3d(5px, 0, 0); 
+    transform: translate3d(10px, 0, 0); 
+  }
+
+  75% {
+    transform: translate3d(15px, 0, 0); 
   }
   100% {
-    transform: translate3d(2px, 0, 0); 
+    transform: translate3d(0px, 0, 0); 
   }
   to {
     transform: translate3d(0px, 0, 0); 
-  } 
+  }
 `
 
 export const ContainerCarrousel = styled.div`

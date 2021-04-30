@@ -3,7 +3,6 @@ import { BackgroundPM } from "../backgroundPM"
 import { Menu } from "../menu"
 import { BodyHome, ContainerHome } from "./style"
 import { data } from "../../data/data"
-/* import { Selection } from "../selection" */
 import { Product } from "../products"
 import { Carrousel } from "../Carrousel"
 

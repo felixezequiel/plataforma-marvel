@@ -10,3 +10,29 @@
 p, h1, h2, input, label, span, button {
   font-family: 'Axiform-Regular';
 }
+
+.scroll {
+  animation: enterCarrousel 1s linear;
+}
+
+@keyframes enterCarrousel {
+  from {
+    transform: translate3d(500px, 0, 0); 
+  }
+  30% {
+    transform: translate3d(2px, 0, 0); 
+  }
+  50% {
+    transform: translate3d(10px, 0, 0); 
+  }
+
+  75% {
+    transform: translate3d(15px, 0, 0); 
+  }
+  100% {
+    transform: translate3d(0px, 0, 0); 
+  }
+  to {
+    transform: translate3d(0px, 0, 0); 
+  }
+}
