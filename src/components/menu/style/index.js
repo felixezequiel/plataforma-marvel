@@ -13,15 +13,16 @@ export const ContainerMenu = styled.div`
 `
 
 export const BoxLogo = styled.div`
-  width: 40%;
   height: 100%;
 `
 
 export const BoxMenu = styled.div`
-  width: 60%;
   height: 100%;
+  width: 100%;
+  max-width: 650px;
   color: ${colors.gray};
 
   display: flex;
   justify-content: space-around;
+  align-items: center;
 `

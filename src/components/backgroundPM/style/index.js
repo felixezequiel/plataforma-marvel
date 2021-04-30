@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const BackgroundImagePM = styled.div`
   background-image: url('/fundo.svg');
   background-repeat: no-repeat;
-  background-position: right -100px top -20px;
+  background-position: right -100px top -8px;
   width: 100vw;
   height: 100vh;
 `

@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom"
+import { colors } from "../../colors"
 import { Logo } from "../logo"
+import { Profile } from "./profile"
 import { BoxLogo, BoxMenu, ContainerMenu } from "./style"
-
-export const Menu = ({ botoes }) => {
+import { menus } from './config/menus'
+export const Menu = ({ setOption }) => {
   return (
     <ContainerMenu>
       <BoxLogo>
@@ -9,10 +12,27 @@ export const Menu = ({ botoes }) => {
       </BoxLogo>
       <BoxMenu>
         {
-          botoes.map((botao, key) => (
-            <a key={key}>{botao}</a>
+          menus.map((menu, key) => (
+            <p 
+              key={key}
+              style={{cursor: 'pointer'}}
+              onClick={() => setOption(menu.value)}
+            >
+              {menu.botao}
+            </p>
           ))
         }
+        <Profile />
+        <Link
+          to='/'
+          style={{
+            textDecorationColor: 'none',
+            color: colors.gray,
+            fontFamily: 'Axiform-Regular'
+          }}
+        >
+          Sair
+        </Link>
       </BoxMenu>
     </ContainerMenu>
   )
