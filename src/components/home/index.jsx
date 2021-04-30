@@ -4,8 +4,8 @@ import { Menu } from "../menu"
 import { BodyHome, ContainerHome } from "./style"
 import { data } from "../../data/data"
 /* import { Selection } from "../selection" */
-import { Carousel } from 'react-responsive-carousel'
 import { Product } from "../products"
+import { Carrousel } from "../Carrousel"
 
 export const Home = () => {
   const [option, setOption] = useState('character')
@@ -34,24 +34,15 @@ export const Home = () => {
           setOption={setOption}
         />
         <BodyHome>
-          <Carousel
-            onClickItem={(key, element) => console.log(element)}
-            on
-            infiniteLoop={false}
-            showStatus={false}
-            showThumbs={false}
-            emulateTouch={true}
-            transitionTime={300}
-            autoPlay={false}
-            centerMode={true}
-            centerSlidePercentage={20}
+          <Carrousel
+            lengthScroll={400}
           >
             {
               state.value.map((product, key) => (
                 <Product data={product} key={key} />
               ))
             }
-          </Carousel>
+          </Carrousel>
         </BodyHome>
       </ContainerHome>
     </BackgroundPM>

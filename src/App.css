@@ -10,10 +10,3 @@
 p, h1, h2, input, label, span, button {
   font-family: 'Axiform-Regular';
 }
-
-.control-arrow::before {
-  border-left: 8px solid rgb(255, 0, 0) !important;
-}
-.control-prev.control-arrow::before {
-  border-left: 8px solid rgb(255, 0, 0) !important;
-}
