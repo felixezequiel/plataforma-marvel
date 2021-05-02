@@ -12,4 +12,9 @@ export const GlobalStyle = createGlobalStyle`
   * {
     font-family: 'Marvel-Regular', 'Axiform-Regular';
   }
+
+  @font-face {
+    font-family: 'Marvel-Mediun';
+    src: url('/fontes/Kastelov - Axiforma Medium.otf');
+  }
 `

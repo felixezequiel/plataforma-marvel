@@ -12,51 +12,59 @@ export const ContainerDetails = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: rgba(0, 0, 0, .5);
 `
 
 export const DisplayDetails = styled.div`
   width: 80%;
-  max-width: 900px;
+  max-width: 1200px;
   height: 70%;
   max-height: 700px;
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 
-  align-items: center;
   background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0), black);
-
   border-radius: 4em;
-
   overflow: auto;
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
 `
 export const BoxDescribe = styled.div`
-  width: 100%;
-  height: 100%;
-
+  width: 50%;
+  
+  padding: 10px 20px 10px 0px;
   color: white;
 
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-
-  padding: 10px 10px 20px 10px;
-  
+  margin-left: 80px;
+  font-size: 100%;
 `
 
 export const ContainerTitle = styled.div`
-  width: 100%;
+  width: auto;
   text-align: center;
   margin-bottom: 30px;
 `
 
 export const ContainerAssesment = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
 `
 
 export const ContainerAvailable = styled.div`
   width: 100%;
+`
+
+export const TextDescribe = styled.div`
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `

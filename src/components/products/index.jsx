@@ -4,7 +4,7 @@ import { Details } from "../details"
 
 export const Product = React.forwardRef((props, ref) => {
   const { data, setDetails } = props
-  console.log(data)
+  
   return (
     <ContainerProduct
       image={data.srcImagem}

@@ -49,6 +49,7 @@ export const ButtonPrev = styled.img.attrs(props => {
   transform: rotate(180deg);
   opacity: ${props => props.disabled ? '.5' : '1'};
   cursor: pointer;
+  margin-right: 10px;
   :hover{
     height:${props => (props.lengthButtonPercent * 1.03) + '%'};
   }
@@ -61,6 +62,7 @@ export const ButtonNext = styled.img.attrs(props => {
   height:${props => props.lengthButtonPercent + '%'};
   opacity: ${props => props.disabled ? '.5' : '1'};
   cursor: pointer;
+  margin-left: 10px;
   :hover{
     height:${props => (props.lengthButtonPercent * 1.03) + '%'};
   }

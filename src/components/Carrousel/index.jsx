@@ -1,13 +1,18 @@
 import { useEffect, useRef, useState } from "react"
 import { ButtonNext, ButtonPrev, ContainerCarrousel, ContentCarrousel } from "./style"
-export const Carrousel = ({ lengthScroll, imgButton, lengthButtonPercent, children }) => {
+import { Filter } from '../filter'
 
+export const Carrousel = ({ lengthScroll, imgButton, lengthButtonPercent, children }) => {
+  const reference = useRef(null)
+  const [filter, setFilter] = useState({ jsx: <></> })
   const [position, setPosition] = useState(0)
   const [disabledNext, setDisabledNext] = useState(false)
   const [disablePrev, setDisablePrev] = useState(false)
   const [classScroll, setClassScroll] = useState('none')
-
-  const reference = useRef(null)
+  const [coor, setCoor] = useState({
+    top: 0,
+    left: 0
+  })
   useEffect(() => {
     
     if (reference.current.offsetWidth + position > reference.current.scrollWidth) setDisabledNext(true)
@@ -28,10 +33,26 @@ export const Carrousel = ({ lengthScroll, imgButton, lengthButtonPercent, childr
     }, 1000)
   }, [children])
 
+  const handleContextMenu = evento => {
+    evento.preventDefault()
+    setFilter({ jsx: <Filter coor={coor} /> })
+  }
+
+  const handleMove = evento => {
+    setCoor({
+      top: evento.clientY,
+      left: evento.clientX - 100
+    })
+  }
+
   return (
     <ContainerCarrousel
       className={classScroll}
+      onContextMenuCapture={handleContextMenu}
+      onClick={ () => setFilter({ jsx: <></> }) }
+      onMouseMove={handleMove}
     >
+      { filter.jsx }
       <ButtonPrev
         disabled={disablePrev}
         onClick={() => {

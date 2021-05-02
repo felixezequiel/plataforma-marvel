@@ -6,7 +6,9 @@ export const data = {
       describe: 'Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.',
       details: null,
       assessment: null,
-      srcImagem: '/imagens/capa-homem-aranha.svg'
+      srcImagem: '/imagens/capa-homem-aranha.svg',
+      lancamento: 2017,
+      cronologia: 4
     },
     {
       title: 'Wanda Maximoff',
@@ -18,7 +20,9 @@ export const data = {
       Vingadores - Ultimato 
       WandaVision`,
       assessment: 4,
-      srcImagem: '/imagens/capa-wanda-maximoff.svg'
+      srcImagem: '/imagens/capa-wanda-maximoff.svg',
+      lancamento: 2015,
+      cronologia: 3
     },
     {
       title: 'Thanos',
@@ -29,7 +33,9 @@ export const data = {
       Vingadores - Guerra Infinita
       Vingadores - Ultimato`,
       assessment: 5,
-      srcImagem: '/imagens/capa-thanos.svg'
+      srcImagem: '/imagens/capa-thanos.svg',
+      lancamento: 2014,
+      cronologia: 2
     },
     {
       title: 'Hulk',
@@ -41,7 +47,9 @@ export const data = {
       Vingadores - Guerra Infinita
       Vingadores - Ultimato `,
       assessment: 4,
-      srcImagem: '/imagens/capa-hulk.svg'
+      srcImagem: '/imagens/capa-hulk.svg',
+      lancamento: 2008,
+      cronologia: 1
     }
   ],
 
@@ -49,27 +57,37 @@ export const data = {
     {
       title: 'Homem de Ferro',
       describe: `Tony Stark (Robert Downey Jr.) é um industrial bilionário, que também é um brilhante inventor, ao ser sequestrado, ele é obrigado a construir uma arma devastadora, mas ao invés disso, cria uma armadura capaz de mudar a história.`,
-      srcImagem: '/imagens/capa-homem-de-ferro.svg'
+      srcImagem: '/imagens/capa-homem-de-ferro.svg',
+      lancamento: 2008,
+      cronologia: 3
     },
     {
       title: 'Homem de Ferro 2',
       describe: `O mundo já sabe que o inventor bilionário Tony Stark (Robert Downey Jr.) é o super-herói blindado Homem de Ferro. Sofrendo pressão do governo, da mídia e do público para compartilhar sua tecnologia com as forças armadas`,
-      srcImagem: '/imagens/capa-homem-de-ferro-2.svg'
+      srcImagem: '/imagens/capa-homem-de-ferro-2.svg',
+      lancamento: 2010,
+      cronologia: 4
     },
     {
       title: 'Thor',
       describe: `Quando é banido do reino de Asgard e exilado na Terra, o arrogante guerreiro Thor (Chris Hemsworth) é obrigado a lutar para reaver seus poderes perdidos. `,
-      srcImagem: '/imagens/capa-thor.svg'
+      srcImagem: '/imagens/capa-thor.svg',
+      lancamento: 2011,
+      cronologia: 5
     },
     {
       title: 'Capitão América',
       describe: `Em Capitão América: O Primeiro Vingador, conhecemos a história de Steve Rogers (Chris Evans) e como ele se tornou o melhor soldado do mundo. `,
-      srcImagem: '/imagens/capa-capitao-america.svg'
+      srcImagem: '/imagens/capa-capitao-america.svg',
+      lancamento: 2011,
+      cronologia: 1
     },
     {
       title: 'Capitã Marvel',
       describe: `Capitã Marvel, parte do exército de elite dos Kree, uma raça alienígena, encontra-se no meio de uma batalha entre seu povo e os Skrulls. `,
-      srcImagem: '/imagens/capa-capita-marvel.svg'
+      srcImagem: '/imagens/capa-capita-marvel.svg',
+      lancamento: 2019,
+      cronologia: 2
     }
   ],
 
@@ -77,18 +95,24 @@ export const data = {
     {
       title: 'Thor: Vikings',
       describe: `Garth Ennis e sua violência atacam novamente na HQ que leva a violência das histórias de Thor ao limite! Na minissérie de 2003 vemos vikings de um passado distante voltando a vida.`,
-      srcImagem: '/imagens/capa-thor-hq.svg'
+      srcImagem: '/imagens/capa-thor-hq.svg',
+      lancamento: 1992,
+      cronologia: 2
     },
     {
       title: `Surfista Prateado:
       Parábola`,
       describe: `O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado, Galactus jurou não consumir o planeta, mas e se, em vez disso, ele transformar a civilização em seus adoradores?`,
-      srcImagem: '/imagens/capa-surfista-prateado.svg'
+      srcImagem: '/imagens/capa-surfista-prateado.svg',
+      lancamento: 1989,
+      cronologia: 1
     },
     {
       title: 'Wolverine: Origens',
       describe: `Origem é uma minissérie em quadrinhos publicada pela Marvel Comics em seis edições, entre 2001 e 2002. A história conta a revelação do passado do personagem Wolverine. ` ,
-      srcImagem: '/imagens/capa-origem.svg'
+      srcImagem: '/imagens/capa-origem.svg',
+      lancamento: 2009,
+      cronologia: 3
     }
   ]
 }
