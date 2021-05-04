@@ -1,6 +1,6 @@
 import {
   ContainerDetails, BoxDescribe,
-  DisplayDetails, ContainerTitle,
+  DisplayDetails,
   ContainerAssesment
 } from "./style"
 
